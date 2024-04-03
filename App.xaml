@@ -1,7 +1,7 @@
-﻿<Application x:Class="WpfHelixToolkit.App"
+﻿<Application x:Class="Bolygok.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfHelixToolkit"
+             xmlns:local="clr-namespace:Bolygok"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

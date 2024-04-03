@@ -1,23 +1,30 @@
-﻿<Window x:Class="WpfHelixToolkit.MainWindow"
+﻿<Window x:Class="Bolygok.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfHelixToolkit"
+        xmlns:local="clr-namespace:Bolygok"
+        ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        
-        
-         xmlns:h="http://helix-toolkit.org/wpf"
-        >
-    <Grid>
-        <h:HelixViewport3D x:Name="ter" Grid.Column="1" ZoomExtentsWhenLoaded="True">
+         Title="MainWindow" Height="450" Width="800" 
+         xmlns:h="http://helix-toolkit.org/wpf">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="700"/>
+        </Grid.ColumnDefinitions>
+        <h:HelixViewport3D x:Name="ter" Grid.Column="1" ZoomExtentsWhenLoaded="True" MouseDown="Ter_MouseDown" Grid.Row="2" >
             <h:HelixViewport3D.Camera>
                 <PerspectiveCamera Position="20, 20, 20" LookDirection="-0.9, -0.9, -0.8" 
                        UpDirection="1, 1, 1" />
             </h:HelixViewport3D.Camera>
-           
+
             <h:SunLight/>
         </h:HelixViewport3D>
+        <Border Grid.Column="0" Background="LightBlue">
+            <Button x:Name="btnUtvonal" Content="Útvonal" Width="80" Height="40" FontWeight="Bold" FontSize="17" Click="btnUtvonal_Click" ></Button>
+            
+        </Border>
+
     </Grid>
 </Window>
